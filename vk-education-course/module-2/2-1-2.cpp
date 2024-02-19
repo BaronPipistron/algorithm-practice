@@ -10,12 +10,9 @@
 #include <stack>
 #include <string>
 
-int main() {
-    std::string str;
+std::string removeDuplicates(std::string& str) {
     std::stack<char> stack;
 
-    std::cin >> str;
-    
     stack.push(str[0]);
     for (size_t i = 1; i != str.length(); ++i) {
         if (stack.top() == str[i]) {
@@ -32,7 +29,15 @@ int main() {
     }
 
     std::reverse(str.begin(), str.end());
-    std::cout << str << std::endl;
+
+    return str;
+}
+
+int main() {
+    std::string str;
+    std::cin >> str;
+    
+    std::cout << removeDuplicates(str) << std::endl;
 
     return 0;
 }
