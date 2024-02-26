@@ -18,6 +18,9 @@ class BinarySearchTree final {
     Node<_Tp>* search(const _Tp&);
     const Node<_Tp>* search(const _Tp&) const;
 
+    Node<_Tp>* getRoot();
+    const Node<_Tp>* getRoot() const;
+
     virtual ~BinarySearchTree();
 
   private:
